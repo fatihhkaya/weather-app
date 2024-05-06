@@ -15,10 +15,13 @@ struct HomeView: View {
     @ObservedObject var dataStore: DataStore
     @ObservedObject var locationManager: LocationManager
     
-    init() {
-        fetchWeather()
-    }
-    
+    init(dataStore: DataStore, locationManager: LocationManager) {
+          self.dataStore = dataStore
+          self.locationManager = locationManager
+          fetchWeather()
+      }
+    @AppStorage("isFirstLaunch") private var isFirstLaunch = true
+
     var body: some View {
         NavigationView {
             VStack {
@@ -27,18 +30,16 @@ struct HomeView: View {
                 if viewModel.isLoading {
                     EmptyWeatherView()
                       
-                } else if viewModel.locationUpdated {
-                
-               
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack {
-                                ForEach(dataStore.favoriteLocations) { location in
-                                    WeatherResult(data: location)
-                                }
+                } else if viewModel.locationUpdated{
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack {
+                            ForEach(dataStore.favoriteLocations) { location in
+                                WeatherResult(data: location)
                             }
                         }
+                    }
                     
-                } else {
+                }else {
                     Text("Konum bilgisi alınamadı.")
                 }
                 
@@ -93,7 +94,7 @@ struct HomeView: View {
   
 
      func fetchWeather() {
-          viewModel.locationManager.reqLocation()
+          locationManager.reqLocation()
           viewModel.fetchWeather()
       }
     
@@ -107,8 +108,5 @@ extension Double{
     }
 }
 
-#Preview {
-   HomeView()
-       
-}
+
 

@@ -12,7 +12,7 @@ import CoreLocation
 struct bulutsystemApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            ContentView()
                 
         }
     }
