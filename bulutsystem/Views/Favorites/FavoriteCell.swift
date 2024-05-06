@@ -7,34 +7,61 @@
 
 import SwiftUI
 
-import SwiftUI
 
 struct FavoriteCell: View {
-    let favorite: Favorite
+    var status: String
+    var feelLike: String
+    var tempMax: String
+    var tempMin: String
+    var cityName: String
     
     var body: some View {
-        HStack {
-            Image(systemName: "mappin.circle.fill")
-                .foregroundColor(.blue)
-                .font(.title)
-            
-            VStack(alignment: .leading) {
-                Text(favorite.name)
-                    .font(.headline)
+     
+            HStack {
+                VStack(alignment: .leading) {
+                    
+                    Text(cityName)
+                        .font(.system(size: 26, weight: .light, design: .rounded))
+                    Text("")
+                    
+                    Spacer()
+                        .frame(height: 20)
+                    
+                    Text(status)
+                        .font(.system(size: 14))
+                    
+                    
+                }
+                .padding(15)
+                Spacer()
+                VStack {
+                    
+                    Text("\(feelLike)°")
+                        .font(.system(size: 40, weight: .medium, design: .rounded))
+                        
+                    Spacer()
+                        .frame(height: 20)
+                    HStack {
+                        Text("Y:\(tempMax)")
+                        Text("D:\(tempMin)")
+                        
+                        
+                    }
+                    
+                }
+                .padding(15)
                 
-                Text("\(favorite.latitude), \(favorite.longitude)")
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
+                
+                
             }
+            .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.blue.opacity(0.5)]), startPoint: .bottomLeading, endPoint: .trailing))
+            .clipShape(RoundedRectangle(cornerRadius: 7))
+        
         }
-        .padding()
-        .background(Color(.systemBackground))
-        .cornerRadius(8)
-        .shadow(radius: 2)
-    }
+    
 }
 
 #Preview {
-    FavoriteCell(favorite: Favorite(id: "1", name: "San Francisco", latitude: 37.7749, longitude: -122.4194))
+    FavoriteCell(status: "Bulutlu", feelLike: "22", tempMax: "22", tempMin: "24",cityName: "adsf")
 }
 

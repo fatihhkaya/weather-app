@@ -14,7 +14,7 @@ struct BlinkViewModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .opacity(blinking ? 0.3 : 1)
-            .animation(.easeInOut(duration: duration).repeatForever(), value: blinking)
+            .animation(.smooth(duration: duration).repeatForever(), value: blinking)
             .onAppear {
                 // Animation will only start when blinking value changes
                 blinking.toggle()
@@ -28,5 +28,5 @@ extension View {
     }
 }
 #Preview {
-    SkeletonBlink()
+    BlinkViewModifier(duration: 0.2) as! any View
 }

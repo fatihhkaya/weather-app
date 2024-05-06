@@ -8,11 +8,41 @@
 import SwiftUI
 
 struct FavLocationView: View {
+    var weatherData: ResponseBody?
+    @ObservedObject var viewModel: FavoriteAddViewModel
+    private let dataStore = DataStore()
+    @Environment(\.dismiss) var dismiss
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+           VStack {
+               
+               if let weather = weatherData {
+                   HStack{
+                      
+                       
+                       Button("Vazgeç") {
+                           // Sheet'i kapat
+                           dismiss()
+                       }
+                       .padding(15)
+                       
+                       Spacer()
+                       
+                       Button("Favoriye Ekle") {
+                           dataStore.addFavoriteLocation(weather)
+                           dismiss()
+                       }
+                       
+                       .padding(15)
+                   }
+                   WeatherResult(data: weather)
 
-#Preview {
-    FavLocationView()
-}
+                 
+               } else {
+                   // Hava durumu bilgisi yoksa
+                   ProgressView()
+               }
+           }
+       }
+   }
+
+

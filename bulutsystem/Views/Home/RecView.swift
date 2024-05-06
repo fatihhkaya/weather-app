@@ -7,12 +7,42 @@
 
 import SwiftUI
 
-struct CardView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct RecView:View{
+    var icon:String
+    var text:String
+    var value:String
+    
+    var body: some View{
+        VStack(spacing:10){
+            Image(systemName: icon)
+                .imageScale(.large)
+                .frame(width: 60,height: 60)
+                .background(.white.opacity(0.6))
+                .foregroundStyle(.black)
+                .cornerRadius(12)
+                .padding(.top)
+            
+            Text(text)
+                .font(.system(size: 16))
+                .multilineTextAlignment(.center)
+                .frame(width: 70,height: 40)
+            
+            
+            
+            Text("\(value)")
+                .font(.system(size: 22,weight: .bold))
+                .padding(.bottom,20)
+            
+        }
+        
+        .frame(width:85,height: 160)
+        .foregroundStyle(.white)
+        .background(.gray.opacity(0.25))
+        .clipShape(RoundedRectangle(cornerRadius: 20))
+        .padding(.horizontal,2)
     }
 }
 
 #Preview {
-    CardView()
+    RecView(icon: "sun.min.fill", text: "Rüzgar ", value: "10 km/S")
 }
