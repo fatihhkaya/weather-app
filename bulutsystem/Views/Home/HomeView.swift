@@ -12,10 +12,11 @@ import SwiftUI
 struct HomeView: View {
     @StateObject private var viewModel = HomeViewModel()
     
-    @StateObject private var dataStore = DataStore()
+    @ObservedObject var dataStore: DataStore
+    @ObservedObject var locationManager: LocationManager
     
     init() {
-       fetchWeather()
+        fetchWeather()
     }
     
     var body: some View {
@@ -42,7 +43,7 @@ struct HomeView: View {
                 }
                 
                 NavigationLink {
-                    MapView()
+                    MapView(dataStore: dataStore)
                    
                 } label: {
                     HStack {
@@ -91,7 +92,7 @@ struct HomeView: View {
     }
   
 
-    private func fetchWeather() {
+     func fetchWeather() {
           viewModel.locationManager.reqLocation()
           viewModel.fetchWeather()
       }

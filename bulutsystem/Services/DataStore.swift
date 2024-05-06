@@ -11,7 +11,7 @@ import MapKit
 
 class DataStore: ObservableObject {
     @Published var favoriteLocations: [ResponseBody] = []
-    @Published var mapRect = MKMapRect.world
+
     
     init() {
         loadFavoriteLocations()
@@ -41,12 +41,9 @@ class DataStore: ObservableObject {
     func addFavoriteLocation(_ location: ResponseBody) {
         favoriteLocations.append(location)
         saveFavoriteLocations()
-        updateMapRegion(location.coordinate)
+       
     }
-    private func updateMapRegion(_ coordinate: CLLocationCoordinate2D) {
-        let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 5000, longitudinalMeters: 5000)
-//        mapRect = region.mapRectThatFits(mapRect, edgePadding: .init(top: 50, left: 50, bottom: 50, right: 50))
-    }
+  
 //    func removeFavoriteLocation(_ location: ResponseBody) {
 //        if let index = favoriteLocations.firstIndex(where: { $0.id == location.id }) {
 //            favoriteLocations.remove(at: index)

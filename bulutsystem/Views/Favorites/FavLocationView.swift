@@ -28,10 +28,10 @@ struct FavLocationView: View {
                        Spacer()
                        
                        Button("Favoriye Ekle") {
-                           if let weather = weatherData {
-                                             dataStore.addFavoriteLocation(weather)
+                         
+                           dataStore.addFavoriteLocation(weather)
                                dismiss()
-                                         }
+                            
                           
                        }
                        

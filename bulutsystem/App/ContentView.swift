@@ -8,18 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var locationmanager:LocationManager
-    
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
-}
+      @StateObject private var dataStore = DataStore()
+      @StateObject private var locationManager = LocationManager()
+
+      var body: some View {
+          HomeView(dataStore: dataStore, locationManager: locationManager)
+      }
+  }
 
 #Preview {
     ContentView()

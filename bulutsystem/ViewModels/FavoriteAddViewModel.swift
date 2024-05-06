@@ -56,7 +56,7 @@ class FavoriteAddViewModel: ObservableObject {
                          self.isPresentingSheet = true
                          self.isLoading = false
                      }
-                   dataStore.addFavoriteLocation(weatherData)
+//                   dataStore.addFavoriteLocation(weatherData)
                  } catch {
                      print("Hava durumu bilgisi alınamadı: \(error)")
                      self.isLoading = false
