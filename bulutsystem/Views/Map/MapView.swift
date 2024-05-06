@@ -8,25 +8,30 @@
 import SwiftUI
 import MapKit
 // MapView.swift
+
 struct MapView: View {
-    @StateObject private var viewModel = MapViewModel()
+    @State private var cameraPosition: MapCameraPosition = .automatic
+    var destination: Destination
     
     var body: some View {
-        Map(coordinateRegion: $viewModel.region, annotationItems: viewModel.favorites) { favorite in
-            MapAnnotation(coordinate: favorite.coordinate) {
-                VStack {
-                    Image(favorite.weatherIcon)
-                        .resizable()
-                        .frame(width: 30, height: 30)
-                    
-                    Text("\(favorite.temperature)°C")
-                        .font(.caption)
+        Map(position:$camPosition, selection: $favLocation) {
+            ForEach (listFavLocation) { loc in
+                Group{
+                    if loc.destination =! nil {
+                        Marker(coordinate: loc.coordinate) {
+                            Label(loc.name), systemImage: "star")
+                            
+                        }
+                        
+                    }else {
+                        Marker(loc.name,coordinate: loc.coordinate)
+                    }
                 }
+                
             }
         }
-        .edgesIgnoringSafeArea(.all)
+      
     }
 }
-#Preview {
-    MapView()
-}
+
+

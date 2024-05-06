@@ -29,10 +29,10 @@ class FavoriteAddViewModel: ObservableObject {
    
      
  
-   
+   //girilen konumun değerlerini çeker 
     func getWeatherForLocation(query: String) {
          isLoading = true
-         CLGeocoder().geocodeAddressString(query) { placemarks, error in
+        CLGeocoder().geocodeAddressString(query) { [self] placemarks, error in
              if let error = error {
                  print("Hata: \(error.localizedDescription)")
                  self.isLoading = false
@@ -56,6 +56,7 @@ class FavoriteAddViewModel: ObservableObject {
                          self.isPresentingSheet = true
                          self.isLoading = false
                      }
+                   dataStore.addFavoriteLocation(weatherData)
                  } catch {
                      print("Hava durumu bilgisi alınamadı: \(error)")
                      self.isLoading = false

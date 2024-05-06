@@ -28,8 +28,11 @@ struct FavLocationView: View {
                        Spacer()
                        
                        Button("Favoriye Ekle") {
-                           dataStore.addFavoriteLocation(weather)
-                           dismiss()
+                           if let weather = weatherData {
+                                             dataStore.addFavoriteLocation(weather)
+                               dismiss()
+                                         }
+                          
                        }
                        
                        .padding(15)
@@ -42,6 +45,7 @@ struct FavLocationView: View {
                    ProgressView()
                }
            }
+          
        }
    }
 

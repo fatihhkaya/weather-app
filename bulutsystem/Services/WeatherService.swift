@@ -45,8 +45,14 @@ struct ResponseBody: Codable, Identifiable {
     let wind: WindResponse
 
     struct CordinatreResponse: Codable {
-        let lon: Double
-        let lat: Double
+        let lon: Double?
+        let lat: Double?
+    }
+    var coordinate: CLLocationCoordinate2D {
+        guard let latitude = coord.lat, let longitude = coord.lon else {
+            return CLLocationCoordinate2D()
+        }
+        return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
 
     struct WeatherResponse: Codable {

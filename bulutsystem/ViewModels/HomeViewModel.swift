@@ -17,13 +17,16 @@ class HomeViewModel: ObservableObject {
     @Published var locationUpdated = false
     @Published var locationAvailable = false
 
-    private let locationManager = LocationManager()
+    let locationManager = LocationManager()
     private let weatherService = WeatherService()
     private var lastLocation: CLLocationCoordinate2D?
-
+    private let dataStore = DataStore()
+    
     init() {
-        locationManager.requestLocation()
+       
+//        locationManager.reqLocation()
         setupLocationObserver()
+       
     }
 
     private func setupLocationObserver() {
@@ -51,13 +54,17 @@ class HomeViewModel: ObservableObject {
                     return
                 }
                 let weather = try await weatherService.getCurrentWather(latitude: location.latitude, longitude: location.longitude)
+                dataStore.favoriteLocations.isEmpty ? dataStore.addFavoriteLocation(weather) : nil
                 DispatchQueue.main.async {
+                    
                     self.cityName = weather.name
                     self.weatherIcon = weather.weather.first?.icon ?? ""
                     self.isLoading = false
                     self.locationUpdated = true
                     self.weather = weather
+                   
                 }
+              
             } catch {
                 print("Hava durumu verisi alınamadı: \(error)")
                 DispatchQueue.main.async {
@@ -66,6 +73,7 @@ class HomeViewModel: ObservableObject {
             }
         }
     }
+    
     func updateWeatherIcon(condition: String) {
         // condition değerine göre uygun ikon adını ayarlayın
      

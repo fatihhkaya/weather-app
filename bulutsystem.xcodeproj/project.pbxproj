@@ -24,7 +24,7 @@
 		3D547BC82BE4D54800A08982 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D547BC72BE4D54800A08982 /* Constants.swift */; };
 		3D547BCA2BE4D57D00A08982 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D547BC92BE4D57D00A08982 /* HomeView.swift */; };
 		3D547BCC2BE4D59600A08982 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D547BCB2BE4D59600A08982 /* FavoriteCell.swift */; };
-		3D547BCE2BE4D5A800A08982 /* FavoriteAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D547BCD2BE4D5A800A08982 /* FavoriteAddView.swift */; };
+		3D547BCE2BE4D5A800A08982 /* FavoriteLocView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D547BCD2BE4D5A800A08982 /* FavoriteLocView.swift */; };
 		3D547BD02BE4D5B100A08982 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D547BCF2BE4D5B100A08982 /* SearchBar.swift */; };
 		3D547BD22BE4D5BE00A08982 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D547BD12BE4D5BE00A08982 /* MapView.swift */; };
 		3D73F3CC2BE534660000E18E /* sun.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D73F3CB2BE534650000E18E /* sun.png */; };
@@ -56,7 +56,7 @@
 		3D547BC72BE4D54800A08982 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3D547BC92BE4D57D00A08982 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3D547BCB2BE4D59600A08982 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
-		3D547BCD2BE4D5A800A08982 /* FavoriteAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAddView.swift; sourceTree = "<group>"; };
+		3D547BCD2BE4D5A800A08982 /* FavoriteLocView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteLocView.swift; sourceTree = "<group>"; };
 		3D547BCF2BE4D5B100A08982 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		3D547BD12BE4D5BE00A08982 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		3D73F3CB2BE534650000E18E /* sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sun.png; sourceTree = "<group>"; };
@@ -195,7 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				3D547BCB2BE4D59600A08982 /* FavoriteCell.swift */,
-				3D547BCD2BE4D5A800A08982 /* FavoriteAddView.swift */,
+				3D547BCD2BE4D5A800A08982 /* FavoriteLocView.swift */,
 				3D547BCF2BE4D5B100A08982 /* SearchBar.swift */,
 				3DAB75F42BE7970B004ED9BA /* FavLocationView.swift */,
 			);
@@ -294,7 +294,7 @@
 				3D547BCA2BE4D57D00A08982 /* HomeView.swift in Sources */,
 				3D547BB82BE4D4CC00A08982 /* Favorite.swift in Sources */,
 				3D547B9F2BE4D29F00A08982 /* ContentView.swift in Sources */,
-				3D547BCE2BE4D5A800A08982 /* FavoriteAddView.swift in Sources */,
+				3D547BCE2BE4D5A800A08982 /* FavoriteLocView.swift in Sources */,
 				3DAB75EF2BE6C48F004ED9BA /* BlinkViewModifier.swift in Sources */,
 				3D547BC42BE4D52B00A08982 /* LocationManager.swift in Sources */,
 				3DAB75F32BE75CAB004ED9BA /* RecView.swift in Sources */,
@@ -451,6 +451,7 @@
 				DEVELOPMENT_TEAM = KLD53U4796;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationUsageDescription = "\"izin ver\"";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"Bu uygulama, hava durumu bilgilerini göstermek için konumunuzu kullanır\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -481,6 +482,7 @@
 				DEVELOPMENT_TEAM = KLD53U4796;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationUsageDescription = "\"izin ver\"";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"Bu uygulama, hava durumu bilgilerini göstermek için konumunuzu kullanır\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
