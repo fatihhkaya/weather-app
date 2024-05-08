@@ -10,10 +10,10 @@ import CoreLocation
 
 // FavoriteAddView.swift
 struct FavoriteLocView: View {
+    @EnvironmentObject private var dataStore: DataStore
     @StateObject private var viewModel = FavoriteAddViewModel()
-     var data: ResponseBody?
-    @StateObject  private var dataStore = DataStore()
-    
+//     var data: ResponseBody?
+  
     var body: some View {
         VStack {
             
@@ -32,12 +32,15 @@ struct FavoriteLocView: View {
             Spacer()
 
         }
+        .onDisappear(perform: {
+            print("favori ekranı \(dataStore.favoriteLocations.count)")
+        })
         .navigationTitle("Hava Durumu")
         .navigationBarTitleDisplayMode(.inline)
         .padding()
         .sheet(isPresented: $viewModel.isPresentingSheet) {
                    if let weatherData = viewModel.selectedLocationWeather {
-                       FavLocationView(weatherData: weatherData, viewModel: self.viewModel)
+                       FavLocationAddView(weatherData: weatherData, viewModel: self.viewModel)
                    }
                }
     }

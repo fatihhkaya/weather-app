@@ -11,16 +11,8 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject private var viewModel = HomeViewModel()
+    @EnvironmentObject private var dataStore: DataStore
     
-    @ObservedObject var dataStore: DataStore
-    @ObservedObject var locationManager: LocationManager
-    
-    init(dataStore: DataStore, locationManager: LocationManager) {
-          self.dataStore = dataStore
-          self.locationManager = locationManager
-          fetchWeather()
-      }
-    @AppStorage("isFirstLaunch") private var isFirstLaunch = true
 
     var body: some View {
         NavigationView {
@@ -30,21 +22,23 @@ struct HomeView: View {
                 if viewModel.isLoading {
                     EmptyWeatherView()
                       
-                } else if viewModel.locationUpdated{
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
-                            ForEach(dataStore.favoriteLocations) { location in
-                                WeatherResult(data: location)
+                }  else if viewModel.locationUpdated  {
+                   
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack {
+                                ForEach(dataStore.favoriteLocations) { location in
+                                    WeatherResult(data: location)
+                                }
                             }
-                        }
                     }
-                    
                 }else {
                     Text("Konum bilgisi alınamadı.")
                 }
                 
                 NavigationLink {
+
                     MapView(dataStore: dataStore)
+                    
                    
                 } label: {
                     HStack {
@@ -68,7 +62,7 @@ struct HomeView: View {
                     if viewModel.weather == nil {
                         ProgressView()
                     }else {
-                        FavoriteLocView(data: viewModel.weather)
+                        FavoriteLocView()
                     }
                    
                 } label: {
@@ -86,17 +80,17 @@ struct HomeView: View {
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             ))
-            
+            .onAppear {
+                print("ana ekranı \(dataStore.favoriteLocations.count)")
+            }
+        
         }
-       
+        
+        
         
     }
   
 
-     func fetchWeather() {
-          locationManager.reqLocation()
-          viewModel.fetchWeather()
-      }
     
    
     

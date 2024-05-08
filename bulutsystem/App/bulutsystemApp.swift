@@ -10,9 +10,14 @@ import CoreLocation
 
 @main
 struct bulutsystemApp: App {
+    @StateObject private var dataStore = DataStore()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+         
+                           HomeView()
+                               .environmentObject(dataStore)
+                     
                 
         }
     }

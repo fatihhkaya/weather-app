@@ -17,7 +17,7 @@ class LocationManager: NSObject, ObservableObject {
     override init() {
         super.init()
         locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
     }
 
@@ -27,7 +27,7 @@ class LocationManager: NSObject, ObservableObject {
             
             switch CLLocationManager().authorizationStatus {
             case .notDetermined:
-                locationManager.requestWhenInUseAuthorization()
+                locationManager.requestAlwaysAuthorization()
             case .restricted, .denied:
                 print("izin yok")
                 break
@@ -46,12 +46,7 @@ extension LocationManager: CLLocationManagerDelegate {
         self.location = location
         
     }
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-          if status == .authorizedWhenInUse {
-              locationManager.requestLocation()
-          }
-      }
-      
+  
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Location Manager Error: \(error.localizedDescription)")

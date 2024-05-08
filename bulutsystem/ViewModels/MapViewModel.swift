@@ -1,5 +1,0 @@
-//
-//  MapViewModel.swift
-//  bulutsystem
-//
-

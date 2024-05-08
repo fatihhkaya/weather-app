@@ -17,14 +17,11 @@ class FavoriteAddViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var favoriteLocations: [ResponseBody] = []
     
-    private let dataStore = DataStore()
+
   
   
     
-    init() {
-        dataStore.loadFavoriteLocations()
-      }
-
+ 
 
    
      

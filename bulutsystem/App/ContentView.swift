@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-      @StateObject private var dataStore = DataStore()
-      @StateObject private var locationManager = LocationManager()
+     
+    @StateObject private var dataStore = DataStore()
 
       var body: some View {
-          HomeView(dataStore: dataStore, locationManager: locationManager)
+          HomeView()
+              .onAppear {
+                          dataStore.objectWillChange.send()
+                      }
       }
   }
 

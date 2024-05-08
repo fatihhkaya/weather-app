@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct FavLocationView: View {
-    var weatherData: ResponseBody?
-    @ObservedObject var viewModel: FavoriteAddViewModel
-    private let dataStore = DataStore()
+struct FavLocationAddView: View {
+    @EnvironmentObject private var dataStore: DataStore
+       var weatherData: ResponseBody?
+       @ObservedObject var viewModel: FavoriteAddViewModel
     @Environment(\.dismiss) var dismiss
     var body: some View {
            VStack {
@@ -30,6 +30,7 @@ struct FavLocationView: View {
                        Button("Favoriye Ekle") {
                          
                            dataStore.addFavoriteLocation(weather)
+                           print("ekleme ekranı \(dataStore.favoriteLocations.count)")
                                dismiss()
                             
                           

@@ -12,15 +12,10 @@
 		3D547BA12BE4D2A000A08982 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D547BA02BE4D2A000A08982 /* Assets.xcassets */; };
 		3D547BA42BE4D2A000A08982 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D547BA32BE4D2A000A08982 /* Preview Assets.xcassets */; };
 		3D547BB42BE4D4B600A08982 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D547BB32BE4D4B600A08982 /* Weather.swift */; };
-		3D547BB62BE4D4C200A08982 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D547BB52BE4D4C200A08982 /* SearchResult.swift */; };
-		3D547BB82BE4D4CC00A08982 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D547BB72BE4D4CC00A08982 /* Favorite.swift */; };
-		3D547BBA2BE4D4DB00A08982 /* FavoriteAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D547BB92BE4D4DB00A08982 /* FavoriteAnnotation.swift */; };
 		3D547BBC2BE4D4ED00A08982 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D547BBB2BE4D4ED00A08982 /* HomeViewModel.swift */; };
 		3D547BBE2BE4D4FD00A08982 /* FavoriteAddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D547BBD2BE4D4FD00A08982 /* FavoriteAddViewModel.swift */; };
-		3D547BC02BE4D50E00A08982 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D547BBF2BE4D50E00A08982 /* MapViewModel.swift */; };
 		3D547BC22BE4D52300A08982 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D547BC12BE4D52300A08982 /* WeatherService.swift */; };
 		3D547BC42BE4D52B00A08982 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D547BC32BE4D52B00A08982 /* LocationManager.swift */; };
-		3D547BC62BE4D53C00A08982 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D547BC52BE4D53C00A08982 /* Extensions.swift */; };
 		3D547BC82BE4D54800A08982 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D547BC72BE4D54800A08982 /* Constants.swift */; };
 		3D547BCA2BE4D57D00A08982 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D547BC92BE4D57D00A08982 /* HomeView.swift */; };
 		3D547BCC2BE4D59600A08982 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D547BCB2BE4D59600A08982 /* FavoriteCell.swift */; };
@@ -31,7 +26,7 @@
 		3DAB75EF2BE6C48F004ED9BA /* BlinkViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAB75EE2BE6C48F004ED9BA /* BlinkViewModifier.swift */; };
 		3DAB75F12BE75C67004ED9BA /* EmptyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAB75F02BE75C67004ED9BA /* EmptyWeatherView.swift */; };
 		3DAB75F32BE75CAB004ED9BA /* RecView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAB75F22BE75CAB004ED9BA /* RecView.swift */; };
-		3DAB75F52BE7970B004ED9BA /* FavLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAB75F42BE7970B004ED9BA /* FavLocationView.swift */; };
+		3DAB75F52BE7970B004ED9BA /* FavLocAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAB75F42BE7970B004ED9BA /* FavLocAddView.swift */; };
 		3DAB75F72BE79968004ED9BA /* WeatherImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAB75F62BE79967004ED9BA /* WeatherImage.swift */; };
 		3DAB75F92BE799A3004ED9BA /* WeatherResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAB75F82BE799A3004ED9BA /* WeatherResult.swift */; };
 		3DAB75FD2BE8A932004ED9BA /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAB75FC2BE8A932004ED9BA /* DataStore.swift */; };
@@ -44,15 +39,10 @@
 		3D547BA02BE4D2A000A08982 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D547BA32BE4D2A000A08982 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3D547BB32BE4D4B600A08982 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
-		3D547BB52BE4D4C200A08982 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
-		3D547BB72BE4D4CC00A08982 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
-		3D547BB92BE4D4DB00A08982 /* FavoriteAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAnnotation.swift; sourceTree = "<group>"; };
 		3D547BBB2BE4D4ED00A08982 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		3D547BBD2BE4D4FD00A08982 /* FavoriteAddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAddViewModel.swift; sourceTree = "<group>"; };
-		3D547BBF2BE4D50E00A08982 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		3D547BC12BE4D52300A08982 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		3D547BC32BE4D52B00A08982 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		3D547BC52BE4D53C00A08982 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3D547BC72BE4D54800A08982 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3D547BC92BE4D57D00A08982 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3D547BCB2BE4D59600A08982 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
@@ -63,7 +53,7 @@
 		3DAB75EE2BE6C48F004ED9BA /* BlinkViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkViewModifier.swift; sourceTree = "<group>"; };
 		3DAB75F02BE75C67004ED9BA /* EmptyWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyWeatherView.swift; sourceTree = "<group>"; };
 		3DAB75F22BE75CAB004ED9BA /* RecView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecView.swift; sourceTree = "<group>"; };
-		3DAB75F42BE7970B004ED9BA /* FavLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavLocationView.swift; sourceTree = "<group>"; };
+		3DAB75F42BE7970B004ED9BA /* FavLocAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavLocAddView.swift; sourceTree = "<group>"; };
 		3DAB75F62BE79967004ED9BA /* WeatherImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherImage.swift; sourceTree = "<group>"; };
 		3DAB75F82BE799A3004ED9BA /* WeatherResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResult.swift; sourceTree = "<group>"; };
 		3DAB75FC2BE8A932004ED9BA /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
@@ -123,9 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				3D547BB32BE4D4B600A08982 /* Weather.swift */,
-				3D547BB52BE4D4C200A08982 /* SearchResult.swift */,
-				3D547BB72BE4D4CC00A08982 /* Favorite.swift */,
-				3D547BB92BE4D4DB00A08982 /* FavoriteAnnotation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -135,7 +122,6 @@
 			children = (
 				3D547BBB2BE4D4ED00A08982 /* HomeViewModel.swift */,
 				3D547BBD2BE4D4FD00A08982 /* FavoriteAddViewModel.swift */,
-				3D547BBF2BE4D50E00A08982 /* MapViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -163,7 +149,6 @@
 		3D547BAE2BE4D41E00A08982 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				3D547BC52BE4D53C00A08982 /* Extensions.swift */,
 				3D547BC72BE4D54800A08982 /* Constants.swift */,
 				3DAB75EE2BE6C48F004ED9BA /* BlinkViewModifier.swift */,
 			);
@@ -197,7 +182,7 @@
 				3D547BCB2BE4D59600A08982 /* FavoriteCell.swift */,
 				3D547BCD2BE4D5A800A08982 /* FavoriteLocView.swift */,
 				3D547BCF2BE4D5B100A08982 /* SearchBar.swift */,
-				3DAB75F42BE7970B004ED9BA /* FavLocationView.swift */,
+				3DAB75F42BE7970B004ED9BA /* FavLocAddView.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -292,7 +277,6 @@
 			files = (
 				3D547BC22BE4D52300A08982 /* WeatherService.swift in Sources */,
 				3D547BCA2BE4D57D00A08982 /* HomeView.swift in Sources */,
-				3D547BB82BE4D4CC00A08982 /* Favorite.swift in Sources */,
 				3D547B9F2BE4D29F00A08982 /* ContentView.swift in Sources */,
 				3D547BCE2BE4D5A800A08982 /* FavoriteLocView.swift in Sources */,
 				3DAB75EF2BE6C48F004ED9BA /* BlinkViewModifier.swift in Sources */,
@@ -301,12 +285,9 @@
 				3D547BBC2BE4D4ED00A08982 /* HomeViewModel.swift in Sources */,
 				3D547BD22BE4D5BE00A08982 /* MapView.swift in Sources */,
 				3D547BB42BE4D4B600A08982 /* Weather.swift in Sources */,
-				3D547BB62BE4D4C200A08982 /* SearchResult.swift in Sources */,
 				3D547BC82BE4D54800A08982 /* Constants.swift in Sources */,
 				3DAB75FD2BE8A932004ED9BA /* DataStore.swift in Sources */,
-				3DAB75F52BE7970B004ED9BA /* FavLocationView.swift in Sources */,
-				3D547BC62BE4D53C00A08982 /* Extensions.swift in Sources */,
-				3D547BBA2BE4D4DB00A08982 /* FavoriteAnnotation.swift in Sources */,
+				3DAB75F52BE7970B004ED9BA /* FavLocAddView.swift in Sources */,
 				3D547BBE2BE4D4FD00A08982 /* FavoriteAddViewModel.swift in Sources */,
 				3DAB75F12BE75C67004ED9BA /* EmptyWeatherView.swift in Sources */,
 				3DAB75F72BE79968004ED9BA /* WeatherImage.swift in Sources */,
@@ -314,7 +295,6 @@
 				3D547B9D2BE4D29F00A08982 /* bulutsystemApp.swift in Sources */,
 				3DAB75F92BE799A3004ED9BA /* WeatherResult.swift in Sources */,
 				3D547BD02BE4D5B100A08982 /* SearchBar.swift in Sources */,
-				3D547BC02BE4D50E00A08982 /* MapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +431,7 @@
 				DEVELOPMENT_TEAM = KLD53U4796;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "\"hava durumu çekecez\"";
 				INFOPLIST_KEY_NSLocationUsageDescription = "\"izin ver\"";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"Bu uygulama, hava durumu bilgilerini göstermek için konumunuzu kullanır\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -458,6 +439,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,6 +464,7 @@
 				DEVELOPMENT_TEAM = KLD53U4796;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "\"hava durumu çekecez\"";
 				INFOPLIST_KEY_NSLocationUsageDescription = "\"izin ver\"";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"Bu uygulama, hava durumu bilgilerini göstermek için konumunuzu kullanır\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -489,6 +472,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -10,6 +10,7 @@ import CoreLocation
 import Combine
 
 class HomeViewModel: ObservableObject {
+    
     @Published var cityName = ""
     @Published var weatherIcon = ""
     @Published var weather: ResponseBody?
@@ -18,15 +19,14 @@ class HomeViewModel: ObservableObject {
     @Published var locationAvailable = false
 
     let locationManager = LocationManager()
-    private let weatherService = WeatherService()
-    private var lastLocation: CLLocationCoordinate2D?
-    private let dataStore = DataStore()
-    
+     let weatherService = WeatherService()
+     var lastLocation: CLLocationCoordinate2D?
+   
     init() {
        
-//        locationManager.reqLocation()
+        locationManager.reqLocation()
         setupLocationObserver()
-       
+        fetchWeather()
     }
 
     private func setupLocationObserver() {
@@ -54,7 +54,7 @@ class HomeViewModel: ObservableObject {
                     return
                 }
                 let weather = try await weatherService.getCurrentWather(latitude: location.latitude, longitude: location.longitude)
-                dataStore.favoriteLocations.isEmpty ? dataStore.addFavoriteLocation(weather) : nil
+            
                 DispatchQueue.main.async {
                     
                     self.cityName = weather.name
@@ -74,17 +74,17 @@ class HomeViewModel: ObservableObject {
         }
     }
     
-    func updateWeatherIcon(condition: String) {
-        // condition değerine göre uygun ikon adını ayarlayın
-     
-        switch condition {
-        case "Clouds": weatherIcon = "cloud.fill"
-        case "Clear": weatherIcon = "sun.max.fill"
-        case "Rain": weatherIcon = "cloud.rain.fill"
-        // ... diğer durumlar için ikonlar ...
-        default: weatherIcon = "questionmark" // Bilinmeyen durum
-        }
-    }
+//    func updateWeatherIcon(condition: String) {
+//        // condition değerine göre uygun ikon adını ayarlayın
+//     
+//        switch condition {
+//        case "Clouds": weatherIcon = "cloud.fill"
+//        case "Clear": weatherIcon = "sun.max.fill"
+//        case "Rain": weatherIcon = "cloud.rain.fill"
+//        // ... diğer durumlar için ikonlar ...
+//        default: weatherIcon = "questionmark" // Bilinmeyen durum
+//        }
+//    }
     
     private var cancelBag = Set<AnyCancellable>()
 }
