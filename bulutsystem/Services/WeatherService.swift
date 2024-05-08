@@ -9,7 +9,7 @@ import Foundation
 import CoreLocation
 // WeatherService.swift
 class WeatherService {
-    let api = "d80c8e354502139fa46fd42a76ab58f5&units=metric"
+    let api = "{YOURAPIKEY}units=metric"
     func getCurrentWather(latitude:CLLocationDegrees,longitude:CLLocationDegrees) async throws -> ResponseBody{
         
         guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=\(api)") else{
